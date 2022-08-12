@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <!-- build:css css/main.css-->
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <!-- endbuild -->
+
+        <title>MyFinancePro</title>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand ml-3 mr-auto" href="#">MyFinancePro</a>
+                <div class="collapse navbar-collapse text-right flex-grow-1" id="Navbar">
+                    <ul class="navbar-nav ml-auto flex-nowrap">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span class="fa fa-sign-in fa-lg"></span> Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span class="fa fa-question fa-lg"></span> Support</a>
+                        </li>
+                    </ul>
+
+                </div>
+        </nav>
+
+        <div class="row row-content">
+           <div class="col-lg-6 d-flex align-items-stretch">
+                <div class="card">
+                    <h3 class="card-header bg-primary">RECENT TRANSACTIONS</h3>
+                    <div class="card-body " style="margin:0px; padding:0px">
+                        <table class="table" style="font-size:75%; ">
+                            <thead>
+                              <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Type</th>
+                                <th scope="col">Amount</th>
+                              </tr>
+                            </thead>
+                            <tbody id="recentpurchasetable">
+                            </tbody>
+                          </table>
+                    </div>
+                </div>
+           </div> 
+
+            <div class="col-lg-6 d-flex align-items-stretch">
+                <div class="card">
+                <h3 class="card-header bg-primary">TOP SPENDING CATEGORIES THIS MONTH</h3>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <dl id="topspendinglist" class="row" style="height:100%; padding-top:15px; padding-left:10px; font-size:90%">
+                            </dl>
+                        </div>
+                        <div class="col-6">
+                            <canvas id="spendingpichart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div> 
+    </div>
+
+        <div class="row row-content">
+            <div class="col-lg-3 d-flex align-items-stretch">
+                 <div class="card">
+                     <h3 class="card-header bg-primary">BUDGET - THIS MONTH</h3>
+                    <div class="card-body">
+                        <div class="row">
+                           <div class="col-12 text-left">
+                            <h2>Expense:</h2>
+                            <div class="row">
+                                <div class="col-6">
+                                    <p id="expensetext1"></p>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <p id="expensetext2"></p>
+                                </div>
+                            </div>
+                            <canvas id="expensechart" ></canvas>
+                           </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h2>Income:</h2>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p id="incometext1"></p>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <p id="incometext2"></p>
+                                    </div>
+                                </div>
+                                <canvas id="incomechart"></canvas>
+                            </div>
+                         </div>
+                     </div>
+                 </div>
+            </div> 
+            <div class="col-lg-6 d-flex align-items-stretch">
+ 
+             <div class="card">
+                 <h3 class="card-header bg-primary">SPENDING OVER TIME</h3>
+                <div class="card-body">
+                    <canvas id="spendingChart"></canvas>
+                 </div>
+             </div>
+        </div> 
+
+        <div class="col-lg-3 d-flex align-items-stretch">
+            <div class="card">
+                <h3 class="card-header bg-primary">INVESTMENT SUMMARY</h3>
+                <div class="card-body">
+                    <table class="table table-borderless" style="font-size:80%;" >
+                        <tbody>
+                            <tr>
+                                <td style="font-weight:bold">Securities</td><td id="securityamount"></td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold">Cash Balance</td><td id="cashamount"></td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight:bold">Total</td><td id="total"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table" style="font-size:80%;" >
+                        <tbody>
+                            <tr>
+                                <td style="font-weight:bold">Today's Change</td><td id="changeamount"></td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+       </div> 
+           
+    </div>
+
+        <!-- build:js js/main.js -->
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="node_modules/chart.js/dist/chart.min.js"></script>
+
+        <script src="javascript/data.json"></script>
+        <script src="javascript/getdata.js"></script>
+        <script src="javascript/drawcharts.js"></script>
+        <!-- endbuild -->
+        
+    </body>
+</html>

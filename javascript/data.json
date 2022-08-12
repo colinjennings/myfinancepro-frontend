@@ -1,0 +1,5 @@
+topspend = '[{"category":"Home","amount":2150.42,"displaycolor":"#4E7BBC"},{"category":"Cash & ATM","amount":552.51,"displaycolor":"#ED1D46"},{"category":"Education","amount":499.0,"displaycolor":"#F6CD13"},{"category":"Buisness Expenses","amount":387.99,"displaycolor":"#52B78F"},{"category":"Other","amount":887.31,"displaycolor":"#987196"}]';
+recenttransactions = '[{"name":"Balance","date":"7/19/2022","type":"Balance Adjustment","amount":-200.34},{"name":"CVS","date":"7/19/2022","type":"Pharmacies","amount":-12.31},{"name":"Starbucks","date":"7/16/2022","type":"Coffee Shops","amount":-14.67},{"name":"Whole Foods","date":"7/15/2022","type":"Groceries","amount":-83.92},{"name":"Test","date":"7/10/2022","type":"Transfer","amount":11200.00}]';
+spendingtime = '[{"month":"APR","amount":2000},{"month":"MAY","amount":2000},{"month":"JUN","amount":4000},{"month":"JUL","amount":6000},{"month":"AUG","amount":3000},{"month":"SEP","amount":5000}]'
+budget = '[{"expensepredicted":4700,"expenseactual":4831.20,"incomepredicted":4000,"incomeactual":4551.99}]'
+investments = '[{"securitiesamount":191382.32,"cashbalance":-25000.0,"todaychange":-509.18,"percentchange":-0.31}]'
